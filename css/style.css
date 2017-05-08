@@ -1,0 +1,101 @@
+/*========================================================
+          Sitewide Styles
+==========================================================*/
+/*multiple selector*/
+* {
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  background: white;
+  font-family: 'Lato', sans-serif;
+  color: black;
+  /*background-image: url(../img/stars.jpg);*/
+  background-repeat: no-repeat;
+  background-size: 1500px;
+  text-align: center;
+  margin-top: 0;
+}
+
+/*========================================================
+          Sections
+========================================================*/
+/*changing title style*/
+h1 {
+  font-size: 70px;
+  color: rgba(2,200,226,0.8);
+  text-shadow: 2px 2px rgba(225, 225, 225, 0.1);
+  margin: 2px 0;
+  font-family: "Rochester",cursive;
+  margin-bottom: 10px;
+}
+
+/*Changing input box style*/
+input, textarea {
+  padding: 10px 1px;
+  padding-right: 20px;
+  margin: 0 auto;
+  width: 35%;
+  margin: 6px;
+  font-size: 20px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/*changing button box style*/
+#clickMe {
+  border-style: none;
+  background: rgba(60,161,85,0.6);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 200;
+  font-size: 20px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.8);
+}
+
+/*format text*/
+p {
+  padding: 10px 10px 0;
+}
+
+.results {
+  /*background: rgba(2,161,185,0.2);*/
+  color: black;
+  font-size: 16px;
+  /*border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.8);*/
+  margin: 0 auto;
+  width: 35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /*border: 1px solid rgba(2,161,185,0.6);*/
+}
+
+/*formatting list*/
+li {
+  list-style-type: none;
+  text-align: left;
+}
+
+li p:last-child {
+  border-bottom-color: white;
+  /*border-bottom-style: solid;*/
+}
+
+.color1 {
+  background-color: rgba(2,161,185,0.6);
+  /*border-top: 1px solid rgba(2,161,185,0.6);*/
+}
+
+.color2 {
+  background-color: rgba(2,161,185,0.2);
+}
+
+img {
+  width: 50px;
+}
