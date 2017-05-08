@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Comment App</title>
+    <title>Comments App</title>
 
     <!-- Spining CSS link -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -21,23 +21,34 @@
   </head>
 
   <body>
+    <div class="comment-app">
+      <!-- Title of page -->
+      <h1 id="header">Comments App</h1>
 
-    <header>
-      <h1 id="header">Comment App</h1>
-    </header>
+      <!-- Form -->
+      <div class="media">
+        <div class="media-left">
+          <img id="image" class="media-object" src="http://lorempixel.com/100/100/people" alt="">
+        </div>
 
-    <!-- Get User data -->
-    <form action="index.html" method="post" id="userData">
-      <input type="text" name="" value="" placeholder="username" id="name"> <br>
-      <textarea name="name" rows="8" cols="80" placeholder="comment" id="comment"></textarea><br>
-      <button type="button" name="button" id="clickMe">Send Message</button>
-    </form>
+        <div class="media-body">
+          <div class="form-row">
+            <input type="text" name="" value="" placeholder="username" id="name"> <br>
+            <textarea name="name" rows="8" cols="80" placeholder="comment" id="comment"></textarea>
+          </div>
 
+          <div class="form-row">
+            <button type="button" name="button" id="clickMe">Add Comment</button>
+          </div>
+        </div>
+      </div>
 
-    <ul id="resultsUL" class="list-group">
+    <!-- comments -->
+      <ul id="results" class="media-list comment-list">
 
-    </ul>
+      </ul>
 
+    </div>
 
 
 
