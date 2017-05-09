@@ -96,9 +96,13 @@ function commentingApp (){
     commentDiv.className = 'media-body color2';
   }
 
+
   //clear values of input and text
   document.getElementById('name').value = "";
   document.getElementById('comment').value = "";
+
+  //delete on click of the delete button
+  document.getElementById(newButton.id).onclick = function(){deleteComment(newList.id)};
 
   changeColor++;
   index++;
@@ -142,4 +146,12 @@ function getTimeAMPM(newDate) {
 for (var i = 0; i <= index; i++) {
   var idButton = document.getElementById('button'+i);
   console.log(index);
+}
+
+//----------------------------------------------------------------------------
+function deleteComment (commentId){
+  var removeList = document.getElementById(commentId);
+  var containerList = removeList.parentNode;
+  containerList.removeChild(removeList);
+  console.log(commentId);
 }
