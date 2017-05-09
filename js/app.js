@@ -14,7 +14,6 @@ var month = ["Jan","Feb","Mar","Apr", "May","Jun","Jul","Aug",
 //------------------------------------------------------------------
 document.getElementById('clickMe').onclick = function (){ commentingApp()};
 
-
 function commentingApp (){
   // Store the user data
   var userName = document.getElementById('name').value;
@@ -64,21 +63,29 @@ function commentingApp (){
   var newDate = new Date();
   var date = month[newDate.getMonth()] + " "+ newDate.getDate()+ ", "+newDate.getFullYear();
   console.log(date);
-  var newUserText = document.createTextNode( userName + "  |  " + date + "   "+ getTimeAMPM(newDate) );
+  var newUserText = document.createTextNode( userName + "  |  " + date + "  ·  "+ getTimeAMPM(newDate) );
 
   // create paragraph and add text to it
   var addComment = document.createElement('p');
   addComment.className = 'userText1';
   addComment.appendChild(newCommentText);
 
-  var addUserName = document.createElement('p');
+  var addUserName = document.createElement('span');
   addUserName.className = 'userText2';
   addUserName.appendChild(newUserText);
-
 
   //add items to list
   commentDiv.appendChild(addComment);
   commentDiv.appendChild(addUserName);
+
+  //create a button
+  var newButton = document.createElement('button');
+  newButton.className = 'delete-button';
+  newButton.id = 'button'+index;
+  var newButtonText = document.createTextNode('delete');
+  newButton.appendChild(newButtonText);
+  commentDiv.appendChild(newButton);
+
 
   //changing background color of even lists
   if (changeColor%2 === 0 )
@@ -95,6 +102,7 @@ function commentingApp (){
 
   changeColor++;
   index++;
+  return index;
 }
 
 //--------------------------------------------------------------------------
@@ -127,4 +135,11 @@ function getTimeAMPM(newDate) {
   var strTime = h + ":" + m + ":" + s + " " + ampm;
   console.log(strTime);
   return strTime;
+}
+
+//----------------------------------------------------------------------------
+
+for (var i = 0; i <= index; i++) {
+  var idButton = document.getElementById('button'+i);
+  console.log(index);
 }
