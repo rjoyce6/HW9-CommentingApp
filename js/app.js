@@ -4,8 +4,9 @@
 //starting indexes
 var changeColor = 1;
 var index = 0;
+var count = 1;
 
-//get time
+//create an array with the months of the year
 var month = ["Jan","Feb","Mar","Apr", "May","Jun","Jul","Aug",
              "Sep", "Oct", "Nov", "Dec"];
 
@@ -14,14 +15,15 @@ var month = ["Jan","Feb","Mar","Apr", "May","Jun","Jul","Aug",
 //------------------------------------------------------------------
 document.getElementById('clickMe').onclick = function (){ commentingApp()};
 
+
 function commentingApp (){
   // Store the user data
   var userName = document.getElementById('name').value;
   var userComment = document.getElementById('comment').value;
   var userImage = document.getElementById('image').src;
 
-  console.log(userName);
-  console.log(userComment);
+  console.log("User Name: "+userName);
+  console.log("User Comment: "+userComment);
 
   //Check that the inpunt and the textarea are not empty
   if(userName === "") {
@@ -62,7 +64,6 @@ function commentingApp (){
   var newCommentText = document.createTextNode(userComment);
   var newDate = new Date();
   var date = month[newDate.getMonth()] + " "+ newDate.getDate()+ ", "+newDate.getFullYear();
-  console.log(date);
   var newUserText = document.createTextNode( userName + "  |  " + date + "  ·  "+ getTimeAMPM(newDate) );
 
   // create paragraph and add text to it
@@ -86,16 +87,13 @@ function commentingApp (){
   newButton.appendChild(newButtonText);
   commentDiv.appendChild(newButton);
 
-
   //changing background color of even lists
   if (changeColor%2 === 0 )
   {
     commentDiv.className = 'media-body color1';
-    console.log(changeColor);
   } else {
     commentDiv.className = 'media-body color2';
   }
-
 
   //clear values of input and text
   document.getElementById('name').value = "";
@@ -103,9 +101,10 @@ function commentingApp (){
 
   //delete on click of the delete button
   document.getElementById(newButton.id).onclick = function(){deleteComment(newList.id)};
-
+  console.log(document.getElementById(newButton.id).onclick );
   changeColor++;
   index++;
+  count++;
   return index;
 }
 
@@ -135,17 +134,9 @@ function getTimeAMPM(newDate) {
   } else {
     ampm = 'PM';
   }
-
   var strTime = h + ":" + m + ":" + s + " " + ampm;
-  console.log(strTime);
+  console.log("Time Comment Posted: "+strTime);
   return strTime;
-}
-
-//----------------------------------------------------------------------------
-
-for (var i = 0; i <= index; i++) {
-  var idButton = document.getElementById('button'+i);
-  console.log(index);
 }
 
 //----------------------------------------------------------------------------
@@ -153,5 +144,4 @@ function deleteComment (commentId){
   var removeList = document.getElementById(commentId);
   var containerList = removeList.parentNode;
   containerList.removeChild(removeList);
-  console.log(commentId);
 }

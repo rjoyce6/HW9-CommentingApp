@@ -19,7 +19,7 @@ body {
 
 .comment-app {
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 640px;
   width: 100%;
 }
 
@@ -32,33 +32,41 @@ body {
   margin-bottom: auto;
 }
 
-header {
-  width: 100%;
+header, .comment-title {
   border-bottom: 3px solid #0ebeff;
+}
+
+.comment-subtitle{
+  color: #0ebeff;
+  margin: 20px 0 5px;
+  text-align: right;
 }
 
 /*changing title style*/
 h1 {
-  margin: 10px  0;
-  font-weight: 900;
+  margin: 10px  0 0;
+  font-weight: bold;
   color: white;
   text-align: left;
 }
 
 h3 {
   color: white;
-  margin: 30px 0 10px;
-  padding-bottom: 10px;
+  margin: 20px 0 10px;
   text-align: left;
-  border-bottom: 3px solid #0ebeff;
+}
+
+/*Form area width*/
+.form-area, ul {
+  margin: 20px auto;
+  max-width: 550px;
 }
 
 /*Changing input box style*/
 input, textarea {
   padding: 4px 10px;
   margin: 0 auto;
-  width: 70%;
-  min-width: 200px;
+  width: 98%;
   margin: 6px;
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.8);
@@ -89,6 +97,7 @@ p {
   padding: 10px 10px 0;
 }
 
+
 .results {
   color: black;
   font-size: 16px;
@@ -114,12 +123,12 @@ li {
 }
 
 .color1 {
-  background-color: #cae9ee;
+  background-color: #e6f8ff;
   border-radius: 6px;
 }
 
 .color2 {
-  background-color: #dbe6eb;
+  background-color:  #99e4ff;
   border-radius: 6px;
 }
 
@@ -147,7 +156,7 @@ span {
   float: left;
 }
 
-.delete-button {
+.delete-button, .comment-button {
   float: right;
   background: transparent;
   border: none;
@@ -158,6 +167,6 @@ span {
   border-radius: 3px;
 }
 
-.delete-button:hover {
-  background-color: rgba(3, 169, 244, 0.1);
+.delete-button:hover, .comment-button:hover {
+  background-color: rgba(3, 169, 244, 0.3);
 }
