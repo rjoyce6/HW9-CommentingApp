@@ -102,10 +102,13 @@ function commentingApp (){
   //delete on click of the delete button
   document.getElementById(newButton.id).onclick = function(){deleteComment(newList.id)};
   console.log(document.getElementById(newButton.id).onclick );
+
+  //Add increments
   changeColor++;
   index++;
   count++;
-  return index;
+
+  return
 }
 
 //--------------------------------------------------------------------------
